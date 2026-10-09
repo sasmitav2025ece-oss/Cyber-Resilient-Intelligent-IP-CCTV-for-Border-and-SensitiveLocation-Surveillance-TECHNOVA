@@ -1,0 +1,11 @@
+{
+  "title": "IBVAP - Intelligent Border Video Analytics Platform",
+  "description": "AI-assisted border surveillance, threat intelligence, and virtual zone monitoring platform using existing CCTV infrastructure.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
