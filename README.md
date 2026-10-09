@@ -1,609 +1,262 @@
+#  Cyber-Resilient Intelligent Video Analytics for Border Surveillance
 
+**Cyber-Resilient IoT-Based Intelligent Video Analytics Platform for Border Surveillance Using Existing IP-CCTV Infrastructure**
 
+## Project Overview
 
+Border surveillance is essential for national security. However, continuously monitoring multiple CCTV cameras manually is difficult, and internet-connected IP cameras may face cybersecurity threats such as unauthorized access, video-stream tampering, and suspicious network activity.
 
+Our project proposes an intelligent, cyber-resilient surveillance platform that uses **existing IP-CCTV infrastructure** to improve border monitoring while detecting potential cyber threats.
 
-# 🛡️ IBVAP
+The platform combines video analytics with cybersecurity monitoring to help security personnel identify suspicious movements and possible camera or video-stream compromises through a centralized dashboard.
 
-## Intelligent Border Video Analytics Platform
+**Our main goal is to improve surveillance security without requiring the installation of additional physical IoT sensors.**
 
-> **Transforming existing CCTV infrastructure into an intelligent, AI-assisted border surveillance and threat intelligence platform.**
+## Problem Statement
 
-[![Smart India Hackathon 2026](https://img.shields.io/badge/Smart%20India%20Hackathon-2026-blue)](#)
-[![AI Surveillance](https://img.shields.io/badge/AI-Video%20Analytics-blue)](#)
-[![Computer Vision](https://img.shields.io/badge/Computer%20Vision-YOLO-green)](#)
-[![Status](https://img.shields.io/badge/Status-Prototype-orange)](#)
+Traditional border surveillance systems often depend on manual monitoring and conventional CCTV infrastructure. Security personnel may find it difficult to monitor multiple camera feeds continuously, especially during nighttime and in remote border locations.
 
----
+Furthermore, connected IP cameras may be vulnerable to unauthorized access, suspicious network activity, video manipulation, and device compromise. If a camera or its video stream is compromised, security personnel may receive misleading information or miss important events.
 
-## 🌐 Live Demo
+There is a need for an intelligent surveillance platform that combines automated video analysis with cybersecurity threat detection while making use of existing CCTV infrastructure.
 
-🚀 **Live Application:** 
+## Proposed Solution
 
-Here is the prototype link:
+We propose a cyber-resilient intelligent video surveillance platform that integrates video analytics, cybersecurity monitoring, and a centralized monitoring dashboard.
 
-`https://ibvap-border-surveillance-analytics.vercel.app/`
+The system aims to:
 
----
+* Analyze CCTV footage to identify potentially suspicious human or vehicle movements.
+* Detect unusual activity in camera connections and network traffic.
+* Identify potential video-stream interruptions or tampering indicators.
+* Generate alerts for suspicious visual events and cybersecurity anomalies.
+* Display camera status, detected events, and security alerts on a centralized dashboard.
+* Maintain event logs to support investigation and incident review.
 
-# 🎯 Problem Statement
+The platform is designed to enhance existing CCTV infrastructure rather than replace it with an entirely new surveillance system.
 
-### SIH26187 – AI-Based Intelligent Video Analytics Platform for Border Surveillance using Existing CCTV Infrastructure
+## Key Features
 
-Border surveillance environments rely heavily on continuous monitoring of CCTV and IP camera feeds. Manual monitoring across multiple cameras can make it difficult to identify suspicious activity quickly.
+### 1. Intelligent Video Analytics
 
-**IBVAP (Intelligent Border Video Analytics Platform)** is designed as an AI-assisted command-and-control prototype that processes surveillance video, identifies relevant objects, tracks activity, monitors virtual restricted zones, calculates risk, generates alerts, preserves evidence, and helps trained human operators understand incidents quickly.
+* Human and vehicle detection.
+* Identification of potentially suspicious movement patterns.
+* Nighttime surveillance support, subject to camera quality and lighting conditions.
+* Event-based alerts for review by security personnel.
 
-The platform is designed as a **decision-support system**. AI provides detection, risk assessment, and explanations while important real-world decisions remain under human control.
+### 2. Cybersecurity Monitoring
 
----
+* Monitoring for unusual camera connection activity.
+* Detection of suspicious network traffic patterns.
+* Identification of unexpected camera disconnections.
+* Monitoring for potential video-stream manipulation or integrity issues.
+* Security event logging for investigation.
 
-# 🚀 Key Features
+### 3. Centralized Dashboard
 
-## 📹 Intelligent CCTV Surveillance
+* View available camera feeds.
+* Monitor camera connection status.
+* View video analytics events and security alerts.
+* Review event history and timestamps.
+* Display relevant security notifications in one place.
 
-* Multi-camera surveillance interface
-* Live camera monitoring
-* Camera status monitoring
-* AI detection overlays
-* Bounding boxes
-* Person and vehicle detection
-* Tracking IDs
-* Confidence scores
-* Fullscreen surveillance mode
+### 4. Cybersecurity-Focused USP
 
----
+**Dual-Layer Surveillance Protection: Detect suspicious activity in the monitored area while also monitoring the digital security of the cameras and video streams used for surveillance.**
 
-## 🧠 AI Object Detection
+Unlike a system that focuses only on video analytics, our proposed approach combines physical-event awareness with cybersecurity monitoring.
 
-The architecture is prepared for AI-powered detection using:
+##  System Workflow
 
-* Ultralytics YOLO
-* OpenCV
-* Python
-* FastAPI
+1. **Camera Input:** Obtain video streams from supported existing IP-CCTV cameras.
+2. **Video Analysis:** Analyze footage to identify humans, vehicles, and potentially suspicious activity.
+3. **Cybersecurity Analysis:** Monitor available network and camera-status information for suspicious patterns.
+4. **Event Correlation:** Present relevant visual events and cyber alerts together for investigation.
+5. **Alert Generation:** Notify authorized personnel when configured detection rules identify suspicious activity.
+6. **Dashboard and Logs:** Display events, camera status, alerts, and historical records.
 
-Supported detection information includes:
-
-* Object type
-* Tracking ID
-* Confidence score
-* Bounding box
-* Camera ID
-* Timestamp
-* Zone information
-
----
-
-## 🚧 Virtual Border & Zone Monitoring
-
-Operators can define surveillance zones such as:
-
-🟢 SAFE
-🟡 WARNING
-🟠 RESTRICTED
-🔴 CRITICAL
-
-The system can evaluate whether tracked objects enter sensitive zones and generate risk-based alerts.
-
----
-
-## 🚨 Intelligent Threat Detection
-
-IBVAP evaluates incidents using multiple contextual factors:
-
-* Object type
-* Detection confidence
-* Zone severity
-* Duration inside a zone
-* Movement behavior
-* Time of activity
-
-Threat levels:
-
-🟢 LOW
-🟡 MEDIUM
-🟠 HIGH
-🔴 CRITICAL
-
----
-
-## 🔍 Explainable AI Threat Assessment
-
-Instead of only displaying a threat score, IBVAP explains **why** an incident received a particular risk level.
-
-Example:
-
-> **Threat Score: 92/100 – CRITICAL**
-
-Possible reasons:
-
-* Person entered a restricted zone
-* Activity occurred during restricted hours
-* Object remained inside the zone
-* Detection confidence exceeded the security threshold
-* No authorized identity was associated
-
-The system can also recommend an operator review action.
-
----
-
-## 📊 Command Center Dashboard
-
-The main command center provides:
-
-* Live cameras
-* Active AI tracks
-* Alerts today
-* Critical threats
-* System uptime
-* Average AI confidence
-* Live CCTV feed
-* Detection overlays
-* Real-time threat feed
-* AI threat explanation
-
-### Cybersecurity & Camera Integrity
-
-The command center also tracks simulated CCTV security telemetry alongside physical surveillance:
-
-* Unauthorized access attempts, anomalous network activity, unknown devices, and stream tampering
-* Per-camera trust scores and trusted/suspicious/compromised status
-* Shared cyber alerts and a combined cyber/physical event log
-* Automatic critical incidents when physical intrusion activity coincides with a camera cyber event
-* Safe demo controls for unauthorized access, network anomalies, video tampering, unknown devices, camera compromise, physical intrusion, and combined attacks
-
-The demo controls only create local simulated events; they do not contact or attack cameras or networks. CAM-03 starts at a trust score of 95 for the access-then-intrusion demonstration.
-
----
-
-## 📋 Incident Management
-
-Every significant event can be recorded as an incident.
-
-Incident information includes:
-
-* Incident ID
-* Timestamp
-* Camera
-* Sector
-* Object type
-* Tracking ID
-* Threat type
-* Confidence
-* Risk score
-* Risk level
-* Status
-* Operator actions
-
-Incident statuses:
-
-`NEW → ACKNOWLEDGED → INVESTIGATING → RESOLVED`
-
-False-positive classification is also supported.
-
----
-
-## 🗂️ Evidence Vault
-
-The evidence system stores or references:
-
-* Detection screenshots
-* Video clip references
-* Detection metadata
-* Camera information
-* Tracking ID
-* Confidence
-* Threat score
-* Incident ID
-* Integrity/hash placeholder
-* Operator status
-
-Evidence access is designed to avoid insecure public file exposure.
-
----
-
-## 📈 Threat Intelligence & Analytics
-
-The analytics module can visualize:
-
-* Threats by hour
-* Threats by camera
-* Threats by sector
-* Person detections
-* Vehicle detections
-* Intrusion events
-* Risk distribution
-* Threat activity timeline
-
----
-
-## 🗺️ Border Surveillance Map
-
-The map module can display:
-
-* Border sectors
-* Camera locations
-* Online cameras
-* Offline cameras
-* Active alerts
-* Threat hotspots
-
-Selecting a camera can show its operational status and recent activity.
-
----
-
-## ❤️ System Health Monitoring
-
-Monitor:
-
-* AI Detection Engine
-* API Server
-* Database
-* WebSocket connection
-* Connected cameras
-* AI inference FPS
-* Average latency
-* CPU usage
-* Memory usage
-* GPU usage
-
----
-
-# 🎬 SIH Demo Mode
-
-IBVAP includes a simulated **Demo Mode** for demonstrations when the actual AI inference engine or CCTV streams are unavailable.
-
-### Demo Workflow
+##  System Architecture
 
 ```text
-Person Detected
-       ↓
-Tracking ID Assigned
-       ↓
-Approaches Warning Zone
-       ↓
-Risk Score Increases
-       ↓
-Enters Restricted Zone
-       ↓
-Critical Threat Generated
-       ↓
-Real-Time Alert
-       ↓
-Evidence Captured
-       ↓
-Incident Created
-       ↓
-AI Explains Risk
-       ↓
-Operator Reviews Incident
-       ↓
-Incident Status Updated
+Existing IP-CCTV Cameras
+          |
+          v
+ Video Stream Acquisition
+          |
+          v
+ Intelligent Video Analytics
+          |
+          +-------------------+
+          |                   |
+          v                   v
+ Human / Vehicle        Camera & Network
+ Detection              Security Monitoring
+          |                   |
+          +---------+---------+
+                    |
+                    v
+          Event and Alert Manager
+                    |
+                    v
+           Centralized Dashboard
+                    |
+                    v
+          Security Personnel
 ```
 
-A **RUN DEMO SCENARIO** feature can trigger this workflow.
+*Note: The architecture represents the proposed system design. Actual modules depend on the implemented prototype.*
 
----
+## 🛠️ Technology Stack
 
-# 🏗️ System Architecture
+Update this section to match the technologies actually used in your repository.
 
-```text
-                 ┌───────────────────┐
-                 │ CCTV / IP Cameras │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Video Stream     │
-                 │ Processing       │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ AI Detection     │
-                 │ YOLO + OpenCV    │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Object Tracking  │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Zone Monitoring  │
-                 │ Risk Analysis    │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Threat Detection │
-                 │ & Alert Engine   │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Evidence &       │
-                 │ Incident System  │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │ Human Operator   │
-                 │ Command Center   │
-                 └───────────────────┘
-```
+| Component                | Technology                                     |
+| ------------------------ | ---------------------------------------------- |
+| Frontend                 | HTML, CSS, JavaScript                          |                                  
+| Backend                  | Java + Spring Boot                            | 
+                                                
+| Programming Language     | Python / JavaScript / Other                    |
+| Video Analytics          | OpenCV, Python, YOLO, TensorFlow, PyTorch,     |
+                           | Flask, HTML, CSS, JavaScript, MySQL            |
+| Camera Integration       | RTSP / ONVIF / Other supported method          |
+| Cybersecurity Monitoring | Python, Flask, HTML, CSS, JavaScript, SQLite / |                               | MySQL,Chart.js                                 |
+| Database                 | MySQL                                          |
+| Development Tools        | Git, GitHub, Visual Studio Code                |
 
----
+##  Target Users
 
-# 🛠️ Technology Stack
+* Border Security Force and other authorized border security personnel.
+* Surveillance control-room operators.
+* Security administrators responsible for camera infrastructure.
+* Organizations operating connected CCTV systems in sensitive locations.
 
-## Frontend
+##  Expected Impact
 
-* React / Next.js
-* TypeScript
-* Tailwind CSS
-* Modern UI Component Library
+* Reduced dependence on continuous manual video monitoring.
+* Faster identification and review of suspicious visual events.
+* Improved visibility into potential camera and network security threats.
+* Better utilization of existing surveillance infrastructure.
+* Centralized event tracking to support security investigations.
 
-## Backend & Database
+These are intended benefits; actual performance must be validated through testing.
 
-* Supabase
-* PostgreSQL
-* Supabase Authentication
-* Supabase Storage
-* Supabase Realtime
+##  Future Scope
 
-## AI & Computer Vision
+* Integration with more IP-CCTV brands and camera protocols.
+* Improved detection of video tampering and replay attacks.
+* Advanced anomaly detection for camera network traffic.
+* Automated correlation of cyber alerts and video events.
+* Role-based access control and stronger authentication.
+* Secure deployment across multiple surveillance locations.
+* Performance evaluation under low-light conditions and limited network connectivity.
 
-* Python
-* FastAPI
-* OpenCV
-* Ultralytics YOLO
-* Object Tracking
+##  Installation and Setup
 
-## Deployment
+The following is a general setup outline. Replace the commands with the actual installation steps for your project.
 
-* Vercel
-* GitHub
+### Prerequisites
 
----
+* Git
+* Visual Studio Code or another code editor
+* Required runtime and dependencies for the project
+* Access to a compatible IP-CCTV camera or a test video stream, if needed
 
-# 📂 Project Structure
-
-```text
-IBVAP/
-│
-├── components/          # Reusable UI components
-├── pages/               # Application pages
-├── services/            # API and Supabase services
-├── hooks/               # Custom React hooks
-├── types/               # TypeScript types
-├── utils/               # Helper functions
-├── public/              # Static assets
-│
-├── .env.example         # Environment variable template
-├── .gitignore
-├── package.json
-└── README.md
-```
-
----
-
-# 🔐 Authentication & Roles
-
-IBVAP supports role-based access.
-
-Roles include:
-
-* 👑 ADMIN
-* 🎖️ COMMANDER
-* 🖥️ OPERATOR
-* 📊 ANALYST
-
-Authentication is designed using Supabase Auth.
-
-Dashboard access can be protected based on authenticated users and assigned roles.
-
----
-
-# 🗄️ Database Architecture
-
-Main data entities:
-
-```text
-profiles
-cameras
-zones
-detections
-tracked_objects
-incidents
-alerts
-evidence
-operator_actions
-system_health
-```
-
-The database is designed to store camera information, AI detections, tracking information, incidents, alerts, evidence metadata, and operator actions.
-
----
-
-# ⚡ Real-Time Functionality
-
-Real-time functionality can use:
-
-* Supabase Realtime
-* WebSocket events
-
-The system is designed so that:
-
-* New detections appear automatically
-* Alerts appear without refreshing
-* Incident status updates dynamically
-* Dashboard values update in real time
-
----
-
-# 🤖 Python AI Service Integration
-
-The frontend is prepared for integration with a Python FastAPI AI service.
-
-Planned API endpoints include:
-
-```text
-GET  /health
-GET  /api/cameras
-POST /api/cameras
-
-GET  /api/incidents
-POST /api/incidents
-
-POST /api/detections
-
-GET  /api/stream/{camera_id}
-
-WebSocket:
-/ws/events
-```
-
-This modular architecture allows simulated demo data to be replaced with the real AI service without rebuilding the complete frontend.
-
----
-
-# ⚙️ Installation
-
-## 1. Clone the Repository
+### Clone the Repository
 
 ```bash
-git clone https://github.com/Riddhi23133/IBVAP_Border_surveillance.git
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd <YOUR_PROJECT_FOLDER>
 ```
 
-## 2. Open the Project
+### Install Dependencies
 
-```bash
-cd IBVAP_Border_surveillance
-```
+Follow the installation instructions for the frontend and backend used in this repository.
 
-## 3. Install Dependencies
+For example, if your project uses Node.js:
 
 ```bash
 npm install
 ```
 
-## 4. Create Environment File
-
-Create:
-
-```text
-.env.local
-```
-
-Example:
-
-```env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-VITE_AI_API_URL=http://localhost:8000
-```
-
-Use environment variable names matching your actual framework configuration.
-
----
-
-# ▶️ Run Locally
+If your project uses Python, create a virtual environment and install the dependencies listed in `requirements.txt`.
 
 ```bash
-npm run dev
+python -m venv venv
 ```
 
-Then open the local URL shown in your terminal.
+Activate the environment and run:
 
----
+```bash
+pip install -r requirements.txt
+```
 
-# 🚀 Deployment
+*Run only the commands relevant to the technologies and files present in your repository.*
 
-The frontend can be deployed using Vercel.
+### Configure the Application
 
-Typical workflow:
+1. Configure the application using the environment variables documented in your project.
+2. Add camera connection details using a secure configuration method.
+3. Configure database settings if a database is required.
+4. Start the backend and frontend using the commands provided in their respective directories.
+
+**Security note:** Never commit camera passwords, API keys, access tokens, private IP details, or other sensitive credentials to GitHub.
+
+##  Testing and Evaluation
+
+The prototype can be evaluated using authorized test video streams and controlled test environments.
+
+Suggested test scenarios:
+
+* Human and vehicle detection accuracy.
+* Camera disconnection detection.
+* Identification of unusual network activity.
+* Detection of video interruptions or suspected tampering.
+* Alert generation and event-log accuracy.
+* Dashboard responsiveness and usability.
+
+Do not test against cameras or networks without permission.
+
+##  Security and Privacy
+
+* Use authorized camera streams only.
+* Protect camera credentials and application secrets.
+* Restrict dashboard access to authorized users.
+* Use secure communication wherever supported.
+* Retain surveillance data only according to applicable policies.
+* Validate cybersecurity detections before treating an alert as a confirmed attack.
+
+##  Project Structure
+
+The exact structure depends on the implementation. A possible organization is:
 
 ```text
-GitHub Repository
-        ↓
-Vercel Import
-        ↓
-Environment Variables
-        ↓
-Build & Deploy
-        ↓
-Live Application
+project/
+├── frontend/
+├── backend/
+├── video_analytics/
+├── cybersecurity/
+├── database/
+├── tests/
+├── docs/
+├── .gitignore
+├── README.md
+└── requirements.txt
 ```
 
----
+Remove folders and files that do not exist in your actual repository.
 
-# 🔒 Security
+## Team
 
-IBVAP is designed with the following security principles:
+**Team Name:** TechNova
 
-* No hard-coded secrets
-* Environment variables for configuration
-* No exposed database passwords
-* No exposed Supabase service-role keys
-* No exposed RTSP passwords
-* Role-based access
-* Row Level Security where applicable
-* Controlled evidence access
+**Project Domain:** Cybersecurity | IoT | Intelligent Surveillance
 
----
+**Project Type:** Hackathon Prototype
 
-# 🎯 Smart India Hackathon 2026
+## Disclaimer
 
-**Project Name:** IBVAP – Intelligent Border Video Analytics Platform
-
-**Problem Statement:** SIH26187 – AI-Based Intelligent Video Analytics Platform for Border Surveillance using Existing CCTV Infrastructure
-
-**Team:** BWU NEURAL NEXUS
-
-**Event:** Smart India Hackathon 2026
+This project is intended to support authorized surveillance and cybersecurity monitoring. Video analytics and anomaly-detection systems can produce false positives and false negatives. Alerts should be reviewed by authorized personnel before taking operational action.
 
 ---
 
-# 🔮 Future Improvements
-
-* Real-time RTSP camera integration
-* Production YOLO inference pipeline
-* Advanced multi-object tracking
-* Multi-camera tracking
-* Improved anomaly detection
-* Camera reliability scoring
-* Automated incident reconstruction
-* Advanced geospatial threat intelligence
-* Improved evidence integrity verification
-* Scalable multi-camera deployment
-
----
-
-# ⚠️ Disclaimer
-
-IBVAP is an AI-assisted surveillance and decision-support prototype.
-
-The system is designed to help trained human operators identify, understand, and prioritize potential security events.
-
-It does **not** autonomously control weapons or perform autonomous physical actions.
-
----
-
-# 👨‍💻 Developed By
-
-### BWU NEURAL NEXUS
-
-Built for **Smart India Hackathon 2026**.
-
----
-
-## ⭐ Support
-
-If you find this project interesting, consider giving the repository a ⭐ on GitHub.
-
----
-
-> **IBVAP — Intelligent Video. Intelligent Detection. Human-Controlled Response.**
+**Building safer and more cyber-resilient surveillance using existing infrastructure.**
